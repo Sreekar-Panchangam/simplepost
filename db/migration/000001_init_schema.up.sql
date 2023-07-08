@@ -5,14 +5,14 @@ CREATE TABLE "follows" (
 );
 
 CREATE TABLE "users" (
-  "id" integer PRIMARY KEY NOT NULL,
+  "id" bigserial PRIMARY KEY,
   "username" varchar NOT NULL,
   "role" varchar NOT NULL,
   "created_at" timestamp NOT NULL DEFAULT (now())
 );
 
 CREATE TABLE "posts" (
-  "id" integer PRIMARY KEY NOT NULL,
+  "id" bigserial PRIMARY KEY,
   "title" varchar NOT NULL,
   "body" text,
   "user_id" integer NOT NULL,

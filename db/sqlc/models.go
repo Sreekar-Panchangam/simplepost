@@ -16,7 +16,7 @@ type Follow struct {
 }
 
 type Post struct {
-	ID    int32  `json:"id"`
+	ID    int64  `json:"id"`
 	Title string `json:"title"`
 	// Content of the post
 	Body      sql.NullString `json:"body"`
@@ -26,7 +26,7 @@ type Post struct {
 }
 
 type User struct {
-	ID        int32     `json:"id"`
+	ID        int64     `json:"id"`
 	Username  string    `json:"username"`
 	Role      string    `json:"role"`
 	CreatedAt time.Time `json:"created_at"`

@@ -17,7 +17,7 @@ OFFSET $2;
 
 -- name: UpdatePost :one
 UPDATE posts
-SET title = $2
+SET body = $2
 WHERE id = $1
 RETURNING *;
 
